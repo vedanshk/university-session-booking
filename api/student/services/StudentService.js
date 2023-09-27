@@ -4,6 +4,7 @@ module.exports = {
   authenticate: async (university_id, password) => {
     try {
       const student = await StudentModel.findOne({ university_id });
+      
 
       if (!student) {
         return null; // Student not found
